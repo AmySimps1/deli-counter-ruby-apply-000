@@ -13,9 +13,25 @@ def line(katz_deli)
 end
 
 
-def take_a_number(katz_deli, name)
-  katz_deli.push(name) # "katz_deli << name" When new customer enters the deli, their name is added to the end of the array.
-  puts "Welcome, #{name}. You are number #{katz_deli.length} in line."
+# def take_a_number(katz_deli, name)
+#   katz_deli.push(name) # "katz_deli << name" When new customer enters the deli, their name is added to the end of the array.
+#   puts "Welcome, #{name}. You are number #{katz_deli.length} in line."
+# end
+
+
+def take_a_number(katz_deli)
+count = nil 
+# katz_deli = [1, 2, 3]
+  if katz_deli.length == 0
+  count = 1 
+  katz_deli << count
+  else
+  count = katz_deli[-1] + 1
+  katz_deli << count
+  end
+
+puts "Welcome, you are number:#{count}."
+
 end
 
 
